@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    tools:context=".ArtistViewFragment">
+
+   <include layout="@layout/toolbar_layout"/>
+
+    <ImageButton
+        android:id="@+id/favorites_icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/black"
+        app:layout_constraintHorizontal_weight=".5"
+        android:src="@drawable/ic_baseline_star_border_24"
+        app:layout_constraintBottom_toTopOf="@id/artist_details"
+        app:layout_constraintEnd_toStartOf="@id/favorites_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/favorites_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/add_favorite_caption"
+        android:textColor="@color/white"
+        app:layout_constraintHorizontal_weight="4"
+        app:layout_constraintBottom_toTopOf="@id/artist_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/favorites_icon"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <FrameLayout
+        android:id="@+id/artist_details"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/black"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/albums_scrollview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/favorites_icon"
+        app:layout_constraintVertical_weight="1">
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/results_artist_name_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/artist_name_artist_view"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="monospace"
+                android:text="@string/discography_txt"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+        <include layout="@layout/progress_bar"/>
+
+    <ScrollView
+        android:id="@+id/albums_scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_weight="3"
+        app:layout_constraintTop_toBottomOf="@+id/artist_details">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/albumRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="30" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

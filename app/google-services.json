@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "562970992756",
+    "project_id": "musicapp-c223d",
+    "storage_bucket": "musicapp-c223d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562970992756:android:4c9debdf0c8f313004f121",
+        "android_client_info": {
+          "package_name": "edu.weber.cs.w01370618.musicfinalproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562970992756-3aqqus7ba0d67fdn5efdg0li5mh72tfj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXUGEy0-ykOoewYaM1o1pAcE8ra9aJhtg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562970992756-3aqqus7ba0d67fdn5efdg0li5mh72tfj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

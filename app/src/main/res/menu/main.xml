@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="@string/playlists_menu_caption"
+        android:id="@+id/menu_playlists"
+        app:showAsAction="never"/>
+    <item android:title="@string/favorite_artists_menu_caption"
+        android:id="@+id/menu_favorite_artists"
+        app:showAsAction="never"/>
+    <item android:title="@string/logout_menu_caption"
+        android:id="@+id/menu_logout"
+        app:showAsAction="never"/>
+</menu>
